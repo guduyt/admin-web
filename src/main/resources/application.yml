@@ -1,0 +1,99 @@
+#设置默认配置文件
+
+spring.profiles.active: dev
+logging.level.root: info
+
+info:
+  "描述": "spring-boot项目监控"
+  version: "@project.version@"
+logging:
+  file: "log/admin-web.log"
+
+server:
+  port: 8999
+
+spring:
+  application:
+    name: "@project.description@"
+  jackson:
+    serialization:
+      indent_output: true
+
+
+endpoints:
+  health:
+    sensitive: false
+
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+
+
+---
+spring:
+  profiles: dev
+  application:
+    name: "@project.description@"
+  boot:
+    admin:
+      url: http://localhost:8999
+      client:
+        prefer-ip: true
+      notify:
+        mail:
+          from: yitao11@zto.cn
+          to: yitao11@zto
+  mail:
+    username: yitao11@zto.cn
+    host: mail.zto.cn
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false
+            required: false
+
+---
+spring:
+  profiles: test
+  application:
+    name: "@project.description@"
+  boot:
+    admin:
+      url: http://10.9.15.151:8999
+      client:
+        prefer-ip: true
+      notify:
+        mail:
+          from: yitao11@zto.cn
+          to: yitao11@zto
+
+
+---
+spring:
+  profiles: prd
+  application:
+    name: "@project.description@"
+  boot:
+    admin:
+      notify:
+        mail:
+          from: yitao11@zto.cn
+          to: yitao11@zto.cn
+  mail:
+    username: yitao11@zto.cn
+    host: mail.zto.cn
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false
+            required: false
