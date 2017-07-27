@@ -45,8 +45,8 @@ spring:
         prefer-ip: true
       notify:
         mail:
-          from: yitao11@zto.cn
-          to: yitao11@zto
+          from: 909513070@qq.com
+          to: 909513070@qq.com
   mail:
     username: yitao11@zto.cn
     host: mail.zto.cn
@@ -71,8 +71,8 @@ spring:
         prefer-ip: true
       notify:
         mail:
-          from: yitao11@zto.cn
-          to: yitao11@zto
+          from: 909513070@qq.com
+          to: 909513070@qq.com
 
 
 ---
@@ -84,11 +84,11 @@ spring:
     admin:
       notify:
         mail:
-          from: yitao11@zto.cn
-          to: yitao11@zto.cn
+          from: 909513070@qq.com
+          to: 909513070@qq.com
   mail:
-    username: yitao11@zto.cn
-    host: mail.zto.cn
+    username: 909513070@qq.com
+    host: smtp.qq.com
     password:
     properties:
       mail:
