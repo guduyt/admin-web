@@ -28,8 +28,8 @@ public class AdminWebApplicationTests {
 	public void sendSimpleMail() throws Exception {
 		mailNotifier.getTo();
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("yitao11@zto.cn");
-		message.setTo("yitao11@zto.cn");
+		message.setFrom("909513070@qq.com");
+		message.setTo("909513070@qq.com");
 		message.setSubject("主题：test邮件");
 		message.setText("测试邮件内容");
 
